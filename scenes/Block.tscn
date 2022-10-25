@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/20x20.png" type="Texture" id=1]
+[ext_resource path="res://scenes/Block.gd" type="Script" id=2]
+
+[node name="Block" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Shape" type="Node2D" parent="."]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Square" type="Sprite" parent="Shape"]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Square2" type="Sprite" parent="Shape"]
+position = Vector2( 20, 0 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Square3" type="Sprite" parent="Shape"]
+position = Vector2( 40, 0 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Square4" type="Sprite" parent="Shape"]
+position = Vector2( 20, 20 )
+texture = ExtResource( 1 )
+centered = false
