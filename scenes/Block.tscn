@@ -11,7 +11,7 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Square" type="Sprite" parent="Shape"]
+[node name="Anchor" type="Sprite" parent="Shape"]
 texture = ExtResource( 1 )
 centered = false
 

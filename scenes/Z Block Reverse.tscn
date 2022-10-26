@@ -6,10 +6,13 @@
 
 [node name="Shape" parent="." index="0"]
 modulate = Color( 0.890196, 0.45098, 0.678431, 1 )
-position = Vector2( 80, -40 )
+position = Vector2( 80, -60 )
+
+[node name="Anchor" parent="Shape" index="0"]
+position = Vector2( 0, 20 )
 
 [node name="Square2" parent="Shape" index="1"]
-position = Vector2( 0, 20 )
+position = Vector2( 0, 0 )
 
 [node name="Square3" parent="Shape" index="2"]
 position = Vector2( 20, 20 )

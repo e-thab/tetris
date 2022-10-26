@@ -3979,5 +3979,4 @@ expand = true
 
 [node name="Tick" type="Timer" parent="."]
 autostart = true
-
 [connection signal="timeout" from="Tick" to="." method="_on_Tick_timeout"]
