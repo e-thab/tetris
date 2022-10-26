@@ -15,1988 +15,19 @@
 script = ExtResource( 3 )
 blocks = [ ExtResource( 9 ), ExtResource( 7 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 6 ) ]
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Board Background" type="TextureRect" parent="."]
 self_modulate = Color( 0.0745098, 0.0627451, 0.121569, 1 )
 anchor_bottom = 1.0
 margin_right = 200.0
 texture = ExtResource( 1 )
 expand = true
 
-[node name="VisibleGrid" type="GridContainer" parent="."]
+[node name="UI Background" type="TextureRect" parent="."]
+self_modulate = Color( 0.298039, 0.298039, 0.298039, 1 )
+anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = 200.0
-custom_constants/vseparation = 0
-custom_constants/hseparation = 0
-columns = 10
-
-[node name="TextureRect" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_right = 20.0
-margin_bottom = 20.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect2" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 20.0
-margin_right = 40.0
-margin_bottom = 20.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect3" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 40.0
-margin_right = 60.0
-margin_bottom = 20.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect4" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 60.0
-margin_right = 80.0
-margin_bottom = 20.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect5" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 80.0
-margin_right = 100.0
-margin_bottom = 20.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect6" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 100.0
-margin_right = 120.0
-margin_bottom = 20.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect7" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 120.0
-margin_right = 140.0
-margin_bottom = 20.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect8" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 140.0
-margin_right = 160.0
-margin_bottom = 20.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect9" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 160.0
-margin_right = 180.0
-margin_bottom = 20.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect10" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 180.0
-margin_right = 200.0
-margin_bottom = 20.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect11" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_top = 20.0
-margin_right = 20.0
-margin_bottom = 40.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect12" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 20.0
-margin_top = 20.0
-margin_right = 40.0
-margin_bottom = 40.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect13" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 40.0
-margin_top = 20.0
-margin_right = 60.0
-margin_bottom = 40.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect14" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 60.0
-margin_top = 20.0
-margin_right = 80.0
-margin_bottom = 40.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect15" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 80.0
-margin_top = 20.0
-margin_right = 100.0
-margin_bottom = 40.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect16" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 100.0
-margin_top = 20.0
-margin_right = 120.0
-margin_bottom = 40.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect17" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 120.0
-margin_top = 20.0
-margin_right = 140.0
-margin_bottom = 40.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect18" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 140.0
-margin_top = 20.0
-margin_right = 160.0
-margin_bottom = 40.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect19" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 160.0
-margin_top = 20.0
-margin_right = 180.0
-margin_bottom = 40.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect20" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 180.0
-margin_top = 20.0
-margin_right = 200.0
-margin_bottom = 40.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect21" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_top = 40.0
-margin_right = 20.0
-margin_bottom = 60.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect22" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 20.0
-margin_top = 40.0
-margin_right = 40.0
-margin_bottom = 60.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect23" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 40.0
-margin_top = 40.0
-margin_right = 60.0
-margin_bottom = 60.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect24" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 60.0
-margin_top = 40.0
-margin_right = 80.0
-margin_bottom = 60.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect25" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 80.0
-margin_top = 40.0
-margin_right = 100.0
-margin_bottom = 60.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect26" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 100.0
-margin_top = 40.0
-margin_right = 120.0
-margin_bottom = 60.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect27" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 120.0
-margin_top = 40.0
-margin_right = 140.0
-margin_bottom = 60.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect28" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 140.0
-margin_top = 40.0
-margin_right = 160.0
-margin_bottom = 60.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect29" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 160.0
-margin_top = 40.0
-margin_right = 180.0
-margin_bottom = 60.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect30" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 180.0
-margin_top = 40.0
-margin_right = 200.0
-margin_bottom = 60.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect31" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_top = 60.0
-margin_right = 20.0
-margin_bottom = 80.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect32" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 20.0
-margin_top = 60.0
-margin_right = 40.0
-margin_bottom = 80.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect33" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 40.0
-margin_top = 60.0
-margin_right = 60.0
-margin_bottom = 80.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect34" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 60.0
-margin_top = 60.0
-margin_right = 80.0
-margin_bottom = 80.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect35" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 80.0
-margin_top = 60.0
-margin_right = 100.0
-margin_bottom = 80.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect36" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 100.0
-margin_top = 60.0
-margin_right = 120.0
-margin_bottom = 80.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect37" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 120.0
-margin_top = 60.0
-margin_right = 140.0
-margin_bottom = 80.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect38" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 140.0
-margin_top = 60.0
-margin_right = 160.0
-margin_bottom = 80.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect39" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 160.0
-margin_top = 60.0
-margin_right = 180.0
-margin_bottom = 80.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect40" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 180.0
-margin_top = 60.0
-margin_right = 200.0
-margin_bottom = 80.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect41" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_top = 80.0
-margin_right = 20.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect42" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 20.0
-margin_top = 80.0
-margin_right = 40.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect43" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 40.0
-margin_top = 80.0
-margin_right = 60.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect44" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 60.0
-margin_top = 80.0
-margin_right = 80.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect45" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 80.0
-margin_top = 80.0
-margin_right = 100.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect46" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 100.0
-margin_top = 80.0
-margin_right = 120.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect47" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 120.0
-margin_top = 80.0
-margin_right = 140.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect48" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 140.0
-margin_top = 80.0
-margin_right = 160.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect49" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 160.0
-margin_top = 80.0
-margin_right = 180.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect50" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 180.0
-margin_top = 80.0
-margin_right = 200.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect51" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_top = 100.0
-margin_right = 20.0
-margin_bottom = 120.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect52" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 20.0
-margin_top = 100.0
-margin_right = 40.0
-margin_bottom = 120.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect53" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 40.0
-margin_top = 100.0
-margin_right = 60.0
-margin_bottom = 120.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect54" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 60.0
-margin_top = 100.0
-margin_right = 80.0
-margin_bottom = 120.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect55" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 80.0
-margin_top = 100.0
-margin_right = 100.0
-margin_bottom = 120.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect56" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 100.0
-margin_top = 100.0
-margin_right = 120.0
-margin_bottom = 120.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect57" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 120.0
-margin_top = 100.0
-margin_right = 140.0
-margin_bottom = 120.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect58" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 140.0
-margin_top = 100.0
-margin_right = 160.0
-margin_bottom = 120.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect59" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 160.0
-margin_top = 100.0
-margin_right = 180.0
-margin_bottom = 120.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect60" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 180.0
-margin_top = 100.0
-margin_right = 200.0
-margin_bottom = 120.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect61" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_top = 120.0
-margin_right = 20.0
-margin_bottom = 140.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect62" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 20.0
-margin_top = 120.0
-margin_right = 40.0
-margin_bottom = 140.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect63" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 40.0
-margin_top = 120.0
-margin_right = 60.0
-margin_bottom = 140.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect64" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 60.0
-margin_top = 120.0
-margin_right = 80.0
-margin_bottom = 140.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect65" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 80.0
-margin_top = 120.0
-margin_right = 100.0
-margin_bottom = 140.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect66" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 100.0
-margin_top = 120.0
-margin_right = 120.0
-margin_bottom = 140.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect67" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 120.0
-margin_top = 120.0
-margin_right = 140.0
-margin_bottom = 140.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect68" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 140.0
-margin_top = 120.0
-margin_right = 160.0
-margin_bottom = 140.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect69" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 160.0
-margin_top = 120.0
-margin_right = 180.0
-margin_bottom = 140.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect70" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 180.0
-margin_top = 120.0
-margin_right = 200.0
-margin_bottom = 140.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect71" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_top = 140.0
-margin_right = 20.0
-margin_bottom = 160.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect72" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 20.0
-margin_top = 140.0
-margin_right = 40.0
-margin_bottom = 160.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect73" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 40.0
-margin_top = 140.0
-margin_right = 60.0
-margin_bottom = 160.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect74" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 60.0
-margin_top = 140.0
-margin_right = 80.0
-margin_bottom = 160.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect75" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 80.0
-margin_top = 140.0
-margin_right = 100.0
-margin_bottom = 160.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect76" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 100.0
-margin_top = 140.0
-margin_right = 120.0
-margin_bottom = 160.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect77" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 120.0
-margin_top = 140.0
-margin_right = 140.0
-margin_bottom = 160.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect78" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 140.0
-margin_top = 140.0
-margin_right = 160.0
-margin_bottom = 160.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect79" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 160.0
-margin_top = 140.0
-margin_right = 180.0
-margin_bottom = 160.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect80" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 180.0
-margin_top = 140.0
-margin_right = 200.0
-margin_bottom = 160.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect81" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_top = 160.0
-margin_right = 20.0
-margin_bottom = 180.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect82" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 20.0
-margin_top = 160.0
-margin_right = 40.0
-margin_bottom = 180.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect83" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 40.0
-margin_top = 160.0
-margin_right = 60.0
-margin_bottom = 180.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect84" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 60.0
-margin_top = 160.0
-margin_right = 80.0
-margin_bottom = 180.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect85" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 80.0
-margin_top = 160.0
-margin_right = 100.0
-margin_bottom = 180.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect86" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 100.0
-margin_top = 160.0
-margin_right = 120.0
-margin_bottom = 180.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect87" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 120.0
-margin_top = 160.0
-margin_right = 140.0
-margin_bottom = 180.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect88" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 140.0
-margin_top = 160.0
-margin_right = 160.0
-margin_bottom = 180.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect89" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 160.0
-margin_top = 160.0
-margin_right = 180.0
-margin_bottom = 180.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect90" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 180.0
-margin_top = 160.0
-margin_right = 200.0
-margin_bottom = 180.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect91" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_top = 180.0
-margin_right = 20.0
-margin_bottom = 200.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect92" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 20.0
-margin_top = 180.0
-margin_right = 40.0
-margin_bottom = 200.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect93" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 40.0
-margin_top = 180.0
-margin_right = 60.0
-margin_bottom = 200.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect94" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 60.0
-margin_top = 180.0
-margin_right = 80.0
-margin_bottom = 200.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect95" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 80.0
-margin_top = 180.0
-margin_right = 100.0
-margin_bottom = 200.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect96" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 100.0
-margin_top = 180.0
-margin_right = 120.0
-margin_bottom = 200.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect97" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 120.0
-margin_top = 180.0
-margin_right = 140.0
-margin_bottom = 200.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect98" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 140.0
-margin_top = 180.0
-margin_right = 160.0
-margin_bottom = 200.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect99" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 160.0
-margin_top = 180.0
-margin_right = 180.0
-margin_bottom = 200.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect100" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 180.0
-margin_top = 180.0
-margin_right = 200.0
-margin_bottom = 200.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect101" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_top = 200.0
-margin_right = 20.0
-margin_bottom = 220.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect102" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 20.0
-margin_top = 200.0
-margin_right = 40.0
-margin_bottom = 220.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect103" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 40.0
-margin_top = 200.0
-margin_right = 60.0
-margin_bottom = 220.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect104" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 60.0
-margin_top = 200.0
-margin_right = 80.0
-margin_bottom = 220.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect105" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 80.0
-margin_top = 200.0
-margin_right = 100.0
-margin_bottom = 220.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect106" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 100.0
-margin_top = 200.0
-margin_right = 120.0
-margin_bottom = 220.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect107" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 120.0
-margin_top = 200.0
-margin_right = 140.0
-margin_bottom = 220.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect108" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 140.0
-margin_top = 200.0
-margin_right = 160.0
-margin_bottom = 220.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect109" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 160.0
-margin_top = 200.0
-margin_right = 180.0
-margin_bottom = 220.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect110" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 180.0
-margin_top = 200.0
-margin_right = 200.0
-margin_bottom = 220.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect111" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_top = 220.0
-margin_right = 20.0
-margin_bottom = 240.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect112" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 20.0
-margin_top = 220.0
-margin_right = 40.0
-margin_bottom = 240.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect113" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 40.0
-margin_top = 220.0
-margin_right = 60.0
-margin_bottom = 240.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect114" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 60.0
-margin_top = 220.0
-margin_right = 80.0
-margin_bottom = 240.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect115" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 80.0
-margin_top = 220.0
-margin_right = 100.0
-margin_bottom = 240.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect116" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 100.0
-margin_top = 220.0
-margin_right = 120.0
-margin_bottom = 240.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect117" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 120.0
-margin_top = 220.0
-margin_right = 140.0
-margin_bottom = 240.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect118" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 140.0
-margin_top = 220.0
-margin_right = 160.0
-margin_bottom = 240.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect119" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 160.0
-margin_top = 220.0
-margin_right = 180.0
-margin_bottom = 240.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect120" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 180.0
-margin_top = 220.0
-margin_right = 200.0
-margin_bottom = 240.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect121" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_top = 240.0
-margin_right = 20.0
-margin_bottom = 260.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect122" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 20.0
-margin_top = 240.0
-margin_right = 40.0
-margin_bottom = 260.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect123" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 40.0
-margin_top = 240.0
-margin_right = 60.0
-margin_bottom = 260.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect124" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 60.0
-margin_top = 240.0
-margin_right = 80.0
-margin_bottom = 260.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect125" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 80.0
-margin_top = 240.0
-margin_right = 100.0
-margin_bottom = 260.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect126" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 100.0
-margin_top = 240.0
-margin_right = 120.0
-margin_bottom = 260.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect127" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 120.0
-margin_top = 240.0
-margin_right = 140.0
-margin_bottom = 260.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect128" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 140.0
-margin_top = 240.0
-margin_right = 160.0
-margin_bottom = 260.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect129" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 160.0
-margin_top = 240.0
-margin_right = 180.0
-margin_bottom = 260.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect130" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 180.0
-margin_top = 240.0
-margin_right = 200.0
-margin_bottom = 260.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect131" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_top = 260.0
-margin_right = 20.0
-margin_bottom = 280.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect132" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 20.0
-margin_top = 260.0
-margin_right = 40.0
-margin_bottom = 280.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect133" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 40.0
-margin_top = 260.0
-margin_right = 60.0
-margin_bottom = 280.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect134" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 60.0
-margin_top = 260.0
-margin_right = 80.0
-margin_bottom = 280.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect135" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 80.0
-margin_top = 260.0
-margin_right = 100.0
-margin_bottom = 280.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect136" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 100.0
-margin_top = 260.0
-margin_right = 120.0
-margin_bottom = 280.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect137" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 120.0
-margin_top = 260.0
-margin_right = 140.0
-margin_bottom = 280.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect138" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 140.0
-margin_top = 260.0
-margin_right = 160.0
-margin_bottom = 280.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect139" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 160.0
-margin_top = 260.0
-margin_right = 180.0
-margin_bottom = 280.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect140" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 180.0
-margin_top = 260.0
-margin_right = 200.0
-margin_bottom = 280.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect141" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_top = 280.0
-margin_right = 20.0
-margin_bottom = 300.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect142" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 20.0
-margin_top = 280.0
-margin_right = 40.0
-margin_bottom = 300.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect143" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 40.0
-margin_top = 280.0
-margin_right = 60.0
-margin_bottom = 300.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect144" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 60.0
-margin_top = 280.0
-margin_right = 80.0
-margin_bottom = 300.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect145" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 80.0
-margin_top = 280.0
-margin_right = 100.0
-margin_bottom = 300.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect146" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 100.0
-margin_top = 280.0
-margin_right = 120.0
-margin_bottom = 300.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect147" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 120.0
-margin_top = 280.0
-margin_right = 140.0
-margin_bottom = 300.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect148" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 140.0
-margin_top = 280.0
-margin_right = 160.0
-margin_bottom = 300.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect149" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 160.0
-margin_top = 280.0
-margin_right = 180.0
-margin_bottom = 300.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect150" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 180.0
-margin_top = 280.0
-margin_right = 200.0
-margin_bottom = 300.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect151" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_top = 300.0
-margin_right = 20.0
-margin_bottom = 320.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect152" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 20.0
-margin_top = 300.0
-margin_right = 40.0
-margin_bottom = 320.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect153" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 40.0
-margin_top = 300.0
-margin_right = 60.0
-margin_bottom = 320.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect154" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 60.0
-margin_top = 300.0
-margin_right = 80.0
-margin_bottom = 320.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect155" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 80.0
-margin_top = 300.0
-margin_right = 100.0
-margin_bottom = 320.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect156" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 100.0
-margin_top = 300.0
-margin_right = 120.0
-margin_bottom = 320.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect157" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 120.0
-margin_top = 300.0
-margin_right = 140.0
-margin_bottom = 320.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect158" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 140.0
-margin_top = 300.0
-margin_right = 160.0
-margin_bottom = 320.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect159" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 160.0
-margin_top = 300.0
-margin_right = 180.0
-margin_bottom = 320.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect160" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 180.0
-margin_top = 300.0
-margin_right = 200.0
-margin_bottom = 320.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect161" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_top = 320.0
-margin_right = 20.0
-margin_bottom = 340.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect162" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 20.0
-margin_top = 320.0
-margin_right = 40.0
-margin_bottom = 340.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect163" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 40.0
-margin_top = 320.0
-margin_right = 60.0
-margin_bottom = 340.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect164" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 60.0
-margin_top = 320.0
-margin_right = 80.0
-margin_bottom = 340.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect165" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 80.0
-margin_top = 320.0
-margin_right = 100.0
-margin_bottom = 340.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect166" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 100.0
-margin_top = 320.0
-margin_right = 120.0
-margin_bottom = 340.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect167" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 120.0
-margin_top = 320.0
-margin_right = 140.0
-margin_bottom = 340.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect168" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 140.0
-margin_top = 320.0
-margin_right = 160.0
-margin_bottom = 340.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect169" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 160.0
-margin_top = 320.0
-margin_right = 180.0
-margin_bottom = 340.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect170" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 180.0
-margin_top = 320.0
-margin_right = 200.0
-margin_bottom = 340.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect171" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_top = 340.0
-margin_right = 20.0
-margin_bottom = 360.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect172" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 20.0
-margin_top = 340.0
-margin_right = 40.0
-margin_bottom = 360.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect173" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 40.0
-margin_top = 340.0
-margin_right = 60.0
-margin_bottom = 360.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect174" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 60.0
-margin_top = 340.0
-margin_right = 80.0
-margin_bottom = 360.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect175" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 80.0
-margin_top = 340.0
-margin_right = 100.0
-margin_bottom = 360.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect176" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 100.0
-margin_top = 340.0
-margin_right = 120.0
-margin_bottom = 360.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect177" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 120.0
-margin_top = 340.0
-margin_right = 140.0
-margin_bottom = 360.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect178" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 140.0
-margin_top = 340.0
-margin_right = 160.0
-margin_bottom = 360.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect179" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 160.0
-margin_top = 340.0
-margin_right = 180.0
-margin_bottom = 360.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect180" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 180.0
-margin_top = 340.0
-margin_right = 200.0
-margin_bottom = 360.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect181" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_top = 360.0
-margin_right = 20.0
-margin_bottom = 380.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect182" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 20.0
-margin_top = 360.0
-margin_right = 40.0
-margin_bottom = 380.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect183" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 40.0
-margin_top = 360.0
-margin_right = 60.0
-margin_bottom = 380.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect184" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 60.0
-margin_top = 360.0
-margin_right = 80.0
-margin_bottom = 380.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect185" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 80.0
-margin_top = 360.0
-margin_right = 100.0
-margin_bottom = 380.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect186" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 100.0
-margin_top = 360.0
-margin_right = 120.0
-margin_bottom = 380.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect187" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 120.0
-margin_top = 360.0
-margin_right = 140.0
-margin_bottom = 380.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect188" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 140.0
-margin_top = 360.0
-margin_right = 160.0
-margin_bottom = 380.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect189" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 160.0
-margin_top = 360.0
-margin_right = 180.0
-margin_bottom = 380.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect190" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 180.0
-margin_top = 360.0
-margin_right = 200.0
-margin_bottom = 380.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect191" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_top = 380.0
-margin_right = 20.0
-margin_bottom = 400.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect192" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 20.0
-margin_top = 380.0
-margin_right = 40.0
-margin_bottom = 400.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect193" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 40.0
-margin_top = 380.0
-margin_right = 60.0
-margin_bottom = 400.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect194" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 60.0
-margin_top = 380.0
-margin_right = 80.0
-margin_bottom = 400.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect195" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 80.0
-margin_top = 380.0
-margin_right = 100.0
-margin_bottom = 400.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect196" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 100.0
-margin_top = 380.0
-margin_right = 120.0
-margin_bottom = 400.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect197" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 120.0
-margin_top = 380.0
-margin_right = 140.0
-margin_bottom = 400.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect198" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 140.0
-margin_top = 380.0
-margin_right = 160.0
-margin_bottom = 400.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect199" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
-margin_left = 160.0
-margin_top = 380.0
-margin_right = 180.0
-margin_bottom = 400.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
-expand = true
-
-[node name="TextureRect200" type="TextureRect" parent="VisibleGrid"]
-self_modulate = Color( 1, 1, 1, 0.156863 )
-margin_left = 180.0
-margin_top = 380.0
-margin_right = 200.0
-margin_bottom = 400.0
-rect_min_size = Vector2( 20, 20 )
-texture = ExtResource( 2 )
+margin_left = 200.0
+texture = ExtResource( 1 )
 expand = true
 
 [node name="Grid" type="GridContainer" parent="."]
@@ -3976,7 +2007,1985 @@ rect_min_size = Vector2( 20, 20 )
 texture = ExtResource( 2 )
 expand = true
 
+[node name="VisibleGrid" type="GridContainer" parent="."]
+anchor_bottom = 1.0
+margin_right = 200.0
+custom_constants/vseparation = 0
+custom_constants/hseparation = 0
+columns = 10
+
+[node name="TextureRect" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_right = 20.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect2" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 20.0
+margin_right = 40.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect3" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 40.0
+margin_right = 60.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect4" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 60.0
+margin_right = 80.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect5" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 80.0
+margin_right = 100.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect6" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 100.0
+margin_right = 120.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect7" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 120.0
+margin_right = 140.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect8" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 140.0
+margin_right = 160.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect9" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 160.0
+margin_right = 180.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect10" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 180.0
+margin_right = 200.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect11" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_top = 20.0
+margin_right = 20.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect12" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect13" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 40.0
+margin_top = 20.0
+margin_right = 60.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect14" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 60.0
+margin_top = 20.0
+margin_right = 80.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect15" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 80.0
+margin_top = 20.0
+margin_right = 100.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect16" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 100.0
+margin_top = 20.0
+margin_right = 120.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect17" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 120.0
+margin_top = 20.0
+margin_right = 140.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect18" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 140.0
+margin_top = 20.0
+margin_right = 160.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect19" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 160.0
+margin_top = 20.0
+margin_right = 180.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect20" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 180.0
+margin_top = 20.0
+margin_right = 200.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect21" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_top = 40.0
+margin_right = 20.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect22" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 20.0
+margin_top = 40.0
+margin_right = 40.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect23" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 60.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect24" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 60.0
+margin_top = 40.0
+margin_right = 80.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect25" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 80.0
+margin_top = 40.0
+margin_right = 100.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect26" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 100.0
+margin_top = 40.0
+margin_right = 120.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect27" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 120.0
+margin_top = 40.0
+margin_right = 140.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect28" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 140.0
+margin_top = 40.0
+margin_right = 160.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect29" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 160.0
+margin_top = 40.0
+margin_right = 180.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect30" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 180.0
+margin_top = 40.0
+margin_right = 200.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect31" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_top = 60.0
+margin_right = 20.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect32" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 20.0
+margin_top = 60.0
+margin_right = 40.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect33" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 40.0
+margin_top = 60.0
+margin_right = 60.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect34" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 60.0
+margin_top = 60.0
+margin_right = 80.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect35" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 80.0
+margin_top = 60.0
+margin_right = 100.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect36" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 100.0
+margin_top = 60.0
+margin_right = 120.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect37" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 120.0
+margin_top = 60.0
+margin_right = 140.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect38" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 140.0
+margin_top = 60.0
+margin_right = 160.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect39" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 160.0
+margin_top = 60.0
+margin_right = 180.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect40" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 180.0
+margin_top = 60.0
+margin_right = 200.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect41" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_top = 80.0
+margin_right = 20.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect42" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 20.0
+margin_top = 80.0
+margin_right = 40.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect43" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 40.0
+margin_top = 80.0
+margin_right = 60.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect44" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 60.0
+margin_top = 80.0
+margin_right = 80.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect45" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 80.0
+margin_top = 80.0
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect46" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 100.0
+margin_top = 80.0
+margin_right = 120.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect47" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 120.0
+margin_top = 80.0
+margin_right = 140.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect48" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 140.0
+margin_top = 80.0
+margin_right = 160.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect49" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 160.0
+margin_top = 80.0
+margin_right = 180.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect50" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 180.0
+margin_top = 80.0
+margin_right = 200.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect51" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_top = 100.0
+margin_right = 20.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect52" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 20.0
+margin_top = 100.0
+margin_right = 40.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect53" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 40.0
+margin_top = 100.0
+margin_right = 60.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect54" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 60.0
+margin_top = 100.0
+margin_right = 80.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect55" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 80.0
+margin_top = 100.0
+margin_right = 100.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect56" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 100.0
+margin_top = 100.0
+margin_right = 120.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect57" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 120.0
+margin_top = 100.0
+margin_right = 140.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect58" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 140.0
+margin_top = 100.0
+margin_right = 160.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect59" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 160.0
+margin_top = 100.0
+margin_right = 180.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect60" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 180.0
+margin_top = 100.0
+margin_right = 200.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect61" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_top = 120.0
+margin_right = 20.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect62" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 20.0
+margin_top = 120.0
+margin_right = 40.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect63" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 40.0
+margin_top = 120.0
+margin_right = 60.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect64" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 60.0
+margin_top = 120.0
+margin_right = 80.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect65" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 80.0
+margin_top = 120.0
+margin_right = 100.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect66" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 100.0
+margin_top = 120.0
+margin_right = 120.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect67" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 120.0
+margin_top = 120.0
+margin_right = 140.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect68" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 140.0
+margin_top = 120.0
+margin_right = 160.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect69" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 160.0
+margin_top = 120.0
+margin_right = 180.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect70" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 180.0
+margin_top = 120.0
+margin_right = 200.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect71" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_top = 140.0
+margin_right = 20.0
+margin_bottom = 160.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect72" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 20.0
+margin_top = 140.0
+margin_right = 40.0
+margin_bottom = 160.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect73" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 40.0
+margin_top = 140.0
+margin_right = 60.0
+margin_bottom = 160.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect74" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 60.0
+margin_top = 140.0
+margin_right = 80.0
+margin_bottom = 160.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect75" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 80.0
+margin_top = 140.0
+margin_right = 100.0
+margin_bottom = 160.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect76" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 100.0
+margin_top = 140.0
+margin_right = 120.0
+margin_bottom = 160.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect77" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 120.0
+margin_top = 140.0
+margin_right = 140.0
+margin_bottom = 160.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect78" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 140.0
+margin_top = 140.0
+margin_right = 160.0
+margin_bottom = 160.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect79" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 160.0
+margin_top = 140.0
+margin_right = 180.0
+margin_bottom = 160.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect80" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 180.0
+margin_top = 140.0
+margin_right = 200.0
+margin_bottom = 160.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect81" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_top = 160.0
+margin_right = 20.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect82" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 20.0
+margin_top = 160.0
+margin_right = 40.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect83" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 40.0
+margin_top = 160.0
+margin_right = 60.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect84" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 60.0
+margin_top = 160.0
+margin_right = 80.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect85" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 80.0
+margin_top = 160.0
+margin_right = 100.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect86" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 100.0
+margin_top = 160.0
+margin_right = 120.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect87" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 120.0
+margin_top = 160.0
+margin_right = 140.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect88" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 140.0
+margin_top = 160.0
+margin_right = 160.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect89" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 160.0
+margin_top = 160.0
+margin_right = 180.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect90" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 180.0
+margin_top = 160.0
+margin_right = 200.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect91" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_top = 180.0
+margin_right = 20.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect92" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 20.0
+margin_top = 180.0
+margin_right = 40.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect93" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 40.0
+margin_top = 180.0
+margin_right = 60.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect94" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 60.0
+margin_top = 180.0
+margin_right = 80.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect95" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 80.0
+margin_top = 180.0
+margin_right = 100.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect96" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 100.0
+margin_top = 180.0
+margin_right = 120.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect97" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 120.0
+margin_top = 180.0
+margin_right = 140.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect98" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 140.0
+margin_top = 180.0
+margin_right = 160.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect99" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 160.0
+margin_top = 180.0
+margin_right = 180.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect100" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 180.0
+margin_top = 180.0
+margin_right = 200.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect101" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_top = 200.0
+margin_right = 20.0
+margin_bottom = 220.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect102" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 20.0
+margin_top = 200.0
+margin_right = 40.0
+margin_bottom = 220.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect103" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 40.0
+margin_top = 200.0
+margin_right = 60.0
+margin_bottom = 220.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect104" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 60.0
+margin_top = 200.0
+margin_right = 80.0
+margin_bottom = 220.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect105" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 80.0
+margin_top = 200.0
+margin_right = 100.0
+margin_bottom = 220.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect106" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 100.0
+margin_top = 200.0
+margin_right = 120.0
+margin_bottom = 220.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect107" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 120.0
+margin_top = 200.0
+margin_right = 140.0
+margin_bottom = 220.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect108" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 140.0
+margin_top = 200.0
+margin_right = 160.0
+margin_bottom = 220.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect109" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 160.0
+margin_top = 200.0
+margin_right = 180.0
+margin_bottom = 220.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect110" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 180.0
+margin_top = 200.0
+margin_right = 200.0
+margin_bottom = 220.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect111" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_top = 220.0
+margin_right = 20.0
+margin_bottom = 240.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect112" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 20.0
+margin_top = 220.0
+margin_right = 40.0
+margin_bottom = 240.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect113" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 40.0
+margin_top = 220.0
+margin_right = 60.0
+margin_bottom = 240.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect114" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 60.0
+margin_top = 220.0
+margin_right = 80.0
+margin_bottom = 240.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect115" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 80.0
+margin_top = 220.0
+margin_right = 100.0
+margin_bottom = 240.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect116" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 100.0
+margin_top = 220.0
+margin_right = 120.0
+margin_bottom = 240.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect117" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 120.0
+margin_top = 220.0
+margin_right = 140.0
+margin_bottom = 240.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect118" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 140.0
+margin_top = 220.0
+margin_right = 160.0
+margin_bottom = 240.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect119" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 160.0
+margin_top = 220.0
+margin_right = 180.0
+margin_bottom = 240.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect120" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 180.0
+margin_top = 220.0
+margin_right = 200.0
+margin_bottom = 240.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect121" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_top = 240.0
+margin_right = 20.0
+margin_bottom = 260.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect122" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 20.0
+margin_top = 240.0
+margin_right = 40.0
+margin_bottom = 260.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect123" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 40.0
+margin_top = 240.0
+margin_right = 60.0
+margin_bottom = 260.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect124" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 60.0
+margin_top = 240.0
+margin_right = 80.0
+margin_bottom = 260.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect125" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 80.0
+margin_top = 240.0
+margin_right = 100.0
+margin_bottom = 260.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect126" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 100.0
+margin_top = 240.0
+margin_right = 120.0
+margin_bottom = 260.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect127" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 120.0
+margin_top = 240.0
+margin_right = 140.0
+margin_bottom = 260.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect128" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 140.0
+margin_top = 240.0
+margin_right = 160.0
+margin_bottom = 260.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect129" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 160.0
+margin_top = 240.0
+margin_right = 180.0
+margin_bottom = 260.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect130" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 180.0
+margin_top = 240.0
+margin_right = 200.0
+margin_bottom = 260.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect131" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_top = 260.0
+margin_right = 20.0
+margin_bottom = 280.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect132" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 20.0
+margin_top = 260.0
+margin_right = 40.0
+margin_bottom = 280.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect133" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 40.0
+margin_top = 260.0
+margin_right = 60.0
+margin_bottom = 280.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect134" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 60.0
+margin_top = 260.0
+margin_right = 80.0
+margin_bottom = 280.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect135" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 80.0
+margin_top = 260.0
+margin_right = 100.0
+margin_bottom = 280.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect136" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 100.0
+margin_top = 260.0
+margin_right = 120.0
+margin_bottom = 280.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect137" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 120.0
+margin_top = 260.0
+margin_right = 140.0
+margin_bottom = 280.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect138" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 140.0
+margin_top = 260.0
+margin_right = 160.0
+margin_bottom = 280.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect139" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 160.0
+margin_top = 260.0
+margin_right = 180.0
+margin_bottom = 280.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect140" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 180.0
+margin_top = 260.0
+margin_right = 200.0
+margin_bottom = 280.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect141" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_top = 280.0
+margin_right = 20.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect142" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 20.0
+margin_top = 280.0
+margin_right = 40.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect143" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 40.0
+margin_top = 280.0
+margin_right = 60.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect144" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 60.0
+margin_top = 280.0
+margin_right = 80.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect145" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 80.0
+margin_top = 280.0
+margin_right = 100.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect146" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 100.0
+margin_top = 280.0
+margin_right = 120.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect147" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 120.0
+margin_top = 280.0
+margin_right = 140.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect148" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 140.0
+margin_top = 280.0
+margin_right = 160.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect149" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 160.0
+margin_top = 280.0
+margin_right = 180.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect150" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 180.0
+margin_top = 280.0
+margin_right = 200.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect151" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_top = 300.0
+margin_right = 20.0
+margin_bottom = 320.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect152" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 20.0
+margin_top = 300.0
+margin_right = 40.0
+margin_bottom = 320.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect153" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 40.0
+margin_top = 300.0
+margin_right = 60.0
+margin_bottom = 320.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect154" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 60.0
+margin_top = 300.0
+margin_right = 80.0
+margin_bottom = 320.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect155" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 80.0
+margin_top = 300.0
+margin_right = 100.0
+margin_bottom = 320.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect156" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 100.0
+margin_top = 300.0
+margin_right = 120.0
+margin_bottom = 320.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect157" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 120.0
+margin_top = 300.0
+margin_right = 140.0
+margin_bottom = 320.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect158" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 140.0
+margin_top = 300.0
+margin_right = 160.0
+margin_bottom = 320.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect159" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 160.0
+margin_top = 300.0
+margin_right = 180.0
+margin_bottom = 320.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect160" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 180.0
+margin_top = 300.0
+margin_right = 200.0
+margin_bottom = 320.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect161" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_top = 320.0
+margin_right = 20.0
+margin_bottom = 340.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect162" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 20.0
+margin_top = 320.0
+margin_right = 40.0
+margin_bottom = 340.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect163" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 40.0
+margin_top = 320.0
+margin_right = 60.0
+margin_bottom = 340.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect164" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 60.0
+margin_top = 320.0
+margin_right = 80.0
+margin_bottom = 340.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect165" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 80.0
+margin_top = 320.0
+margin_right = 100.0
+margin_bottom = 340.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect166" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 100.0
+margin_top = 320.0
+margin_right = 120.0
+margin_bottom = 340.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect167" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 120.0
+margin_top = 320.0
+margin_right = 140.0
+margin_bottom = 340.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect168" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 140.0
+margin_top = 320.0
+margin_right = 160.0
+margin_bottom = 340.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect169" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 160.0
+margin_top = 320.0
+margin_right = 180.0
+margin_bottom = 340.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect170" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 180.0
+margin_top = 320.0
+margin_right = 200.0
+margin_bottom = 340.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect171" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_top = 340.0
+margin_right = 20.0
+margin_bottom = 360.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect172" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 20.0
+margin_top = 340.0
+margin_right = 40.0
+margin_bottom = 360.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect173" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 40.0
+margin_top = 340.0
+margin_right = 60.0
+margin_bottom = 360.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect174" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 60.0
+margin_top = 340.0
+margin_right = 80.0
+margin_bottom = 360.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect175" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 80.0
+margin_top = 340.0
+margin_right = 100.0
+margin_bottom = 360.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect176" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 100.0
+margin_top = 340.0
+margin_right = 120.0
+margin_bottom = 360.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect177" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 120.0
+margin_top = 340.0
+margin_right = 140.0
+margin_bottom = 360.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect178" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 140.0
+margin_top = 340.0
+margin_right = 160.0
+margin_bottom = 360.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect179" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 160.0
+margin_top = 340.0
+margin_right = 180.0
+margin_bottom = 360.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect180" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 180.0
+margin_top = 340.0
+margin_right = 200.0
+margin_bottom = 360.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect181" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_top = 360.0
+margin_right = 20.0
+margin_bottom = 380.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect182" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 20.0
+margin_top = 360.0
+margin_right = 40.0
+margin_bottom = 380.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect183" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 40.0
+margin_top = 360.0
+margin_right = 60.0
+margin_bottom = 380.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect184" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 60.0
+margin_top = 360.0
+margin_right = 80.0
+margin_bottom = 380.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect185" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 80.0
+margin_top = 360.0
+margin_right = 100.0
+margin_bottom = 380.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect186" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 100.0
+margin_top = 360.0
+margin_right = 120.0
+margin_bottom = 380.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect187" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 120.0
+margin_top = 360.0
+margin_right = 140.0
+margin_bottom = 380.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect188" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 140.0
+margin_top = 360.0
+margin_right = 160.0
+margin_bottom = 380.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect189" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 160.0
+margin_top = 360.0
+margin_right = 180.0
+margin_bottom = 380.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect190" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 180.0
+margin_top = 360.0
+margin_right = 200.0
+margin_bottom = 380.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect191" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_top = 380.0
+margin_right = 20.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect192" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 20.0
+margin_top = 380.0
+margin_right = 40.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect193" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 40.0
+margin_top = 380.0
+margin_right = 60.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect194" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 60.0
+margin_top = 380.0
+margin_right = 80.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect195" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 80.0
+margin_top = 380.0
+margin_right = 100.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect196" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 100.0
+margin_top = 380.0
+margin_right = 120.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect197" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 120.0
+margin_top = 380.0
+margin_right = 140.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect198" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 140.0
+margin_top = 380.0
+margin_right = 160.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect199" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 0.392157, 0.392157, 0.392157, 0.156863 )
+margin_left = 160.0
+margin_top = 380.0
+margin_right = 180.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect200" type="TextureRect" parent="VisibleGrid"]
+self_modulate = Color( 1, 1, 1, 0.156863 )
+margin_left = 180.0
+margin_top = 380.0
+margin_right = 200.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 2 )
+expand = true
+
 [node name="Tick" type="Timer" parent="."]
+wait_time = 0.75
 autostart = true
 
 [connection signal="timeout" from="Tick" to="." method="_on_Tick_timeout"]
