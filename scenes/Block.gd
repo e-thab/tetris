@@ -26,6 +26,10 @@ func _process(delta):
 		rotate_block(true)
 	elif Input.is_action_just_pressed("rotate_counterwise"):
 		rotate_block(false)
+	
+	if Input.is_action_just_pressed("drop"):
+		while can_move(DOWN):
+			move_down()
 
 
 func interpret_movement(delta):
@@ -54,34 +58,45 @@ func interpret_movement(delta):
 
 func rotate_block(clockwise):
 	var anchor = $Shape/Anchor
+	var original_pos = []
 	var new_pos_arr = []
 	
-	#if clockwise:
-		# iterate through each child shape (anchor being child 0)
 	for s in $Shape.get_children():
 		if anchor == s:
 			continue
-			
+		
+		original_pos.append([s.position.x, s.position.y])
+		
 		# find x and y distance from anchor tile
 		var x = s.position.x - anchor.position.x
 		var y = s.position.y - anchor.position.y
 		
 		# apply rotation
-		#s.position.y += -x * pow(-1, float(clockwise)) - y
-		#s.position.x += y * pow(-1, float(clockwise)) - x
-		var new_pos = [-x * pow(-1, float(clockwise)) - y,
-						y * pow(-1, float(clockwise)) - x]
-		new_pos_arr.append(new_pos)
-		
-		if main.is_occupied(calculate_pos(new_pos)):
-			return
-	
-	for i in range(1, $Shape.get_child_count()):
-		$Shape.get_child(i).position.x = new_pos_arr[i][0]
-		$Shape.get_child(i).position.y = new_pos_arr[i][1]
-		
+		s.position.y += -x * pow(-1, float(clockwise)) - y
+		s.position.x += y * pow(-1, float(clockwise)) - x
 	
 	generate_pos_arr()
+	
+	# backward way to do this. it rotates shape THEN checks if it can or not
+	# the more intuitive way is probably better, but this is simpler for now
+	var revert = false
+	for i in pos_arr:
+		if main.is_occupied(i):
+			print("can't rotate, reverting")
+			revert = true
+			
+	if revert:
+		for s in range($Shape.get_child_count()):
+			if anchor == $Shape.get_child(s):
+				continue
+			$Shape.get_child(s).position.x = original_pos[s-1][0]
+			$Shape.get_child(s).position.y = original_pos[s-1][1]
+		generate_pos_arr()
+
+
+func find_pos(arr, shape):
+	# return simplified format x,y pos given transform x,y coordinates
+	return [(arr[0]+shape.position.x)/20, (arr[1]+shape.position.y)/20]
 
 
 func move_down():
@@ -108,12 +123,12 @@ func can_move(dir):
 	match dir:
 		LEFT:
 			for p in pos_arr:
-				if p[0] <= 0 or main.is_occupied([p[0] - 1, p[1]]):
+				if main.is_occupied([p[0] - 1, p[1]]):
 					return false
 		
 		RIGHT:
 			for p in pos_arr:
-				if p[0] >= 9 or main.is_occupied([p[0] + 1, p[1]]):
+				if main.is_occupied([p[0] + 1, p[1]]):
 					return false
 		
 		UP:
@@ -133,11 +148,6 @@ func generate_pos_arr():
 	for i in $Shape.get_children():
 		pos_arr.append([$Shape.position.x/20 + i.position.x/20, 
 						$Shape.position.y/20 + i.position.y/20])
-
-
-func calculate_pos(arr):
-	# return simplified format x,y pos given transform x,y coordinates
-	return [arr[0]/20, arr[1]/20]
 
 
 func set_main(node):

@@ -30,6 +30,9 @@ func _process(delta):
 	if accel_held >= 0.1:
 		emit_signal("tick")
 		accel_held = 0
+	
+	if Input.is_action_just_pressed("pause"):
+		$Tick.paused = !$Tick.paused
 
 
 func generate_block():
@@ -43,6 +46,9 @@ func generate_block():
 func is_occupied(pos):
 	if pos in occupied:
 		return true
+	elif pos[0] < 0 or pos[0] > 9 or pos[0] > 19:
+		return true
+		
 	return false
 
 
@@ -50,8 +56,11 @@ func place(pos_arr, color):
 	for p in pos_arr:
 		occupied.append(p)
 		
-		var i = get_grid(p)
-		$Grid.get_child(i).self_modulate = color
+		if p[1] >= 0:
+			var i = get_grid(p)
+			$Grid.get_child(i).self_modulate = color
+		else:
+			print('lose')
 	
 	clear_lines()
 	generate_block()

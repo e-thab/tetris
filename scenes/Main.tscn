@@ -23,7 +23,6 @@ texture = ExtResource( 1 )
 expand = true
 
 [node name="VisibleGrid" type="GridContainer" parent="."]
-visible = false
 anchor_bottom = 1.0
 margin_right = 200.0
 custom_constants/vseparation = 0
@@ -3979,4 +3978,5 @@ expand = true
 
 [node name="Tick" type="Timer" parent="."]
 autostart = true
+
 [connection signal="timeout" from="Tick" to="." method="_on_Tick_timeout"]
