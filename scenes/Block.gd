@@ -59,7 +59,7 @@ func interpret_movement(delta):
 func rotate_block(clockwise):
 	var anchor = $Shape/Anchor
 	var original_pos = []
-	var new_pos_arr = []
+	#var new_pos_arr = []
 	
 	for s in $Shape.get_children():
 		if anchor == s:
@@ -82,7 +82,7 @@ func rotate_block(clockwise):
 	var revert = false
 	for i in pos_arr:
 		if main.is_occupied(i):
-			print("can't rotate, reverting")
+			#print("can't rotate, reverting")
 			revert = true
 			
 	if revert:
