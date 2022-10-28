@@ -4,15 +4,18 @@ const LEFT = 0
 const RIGHT = 1
 const UP = 3
 const DOWN = 4
-#const BG_COLOR = Color("13101f")
 
 signal tick
 
 export(Array, PackedScene) var blocks
+export(Array, Texture) var thumbs
+
+var next_block = -1
 var rands = [-1, -1, -1]
 var occupied = []
 var row_count = {}
 var accel_held = 0
+var game_time = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -26,27 +29,40 @@ func _ready():
 		for _y in range(20):
 			occupied[x].append(false)
 	
+	next_block = rand_index()
 	generate_block()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_pressed("accelerate"):
-		$Tick.paused = true
-		accel_held += delta
-	elif Input.is_action_just_released("accelerate"):
-		$Tick.paused = false
-		accel_held = 0
-	
-	if accel_held >= 0.1:
-		emit_signal("tick")
-		accel_held = 0
+	if !get_tree().paused:
+		if Input.is_action_pressed("accelerate"):
+			$Tick.paused = true
+			accel_held += delta
+		elif Input.is_action_just_released("accelerate"):
+			$Tick.paused = false
+			accel_held = 0
+		
+		if accel_held >= 0.1:
+			emit_signal("tick")
+			accel_held = 0
 	
 	if Input.is_action_just_pressed("pause"):
-		$Tick.paused = !$Tick.paused
+		get_tree().paused = !get_tree().paused
+		print(get_tree().paused)
 
 
 func generate_block():
+	var inst = blocks[next_block].instance()
+	inst.set_main(self)
+	connect('tick', inst, '_on_Tick')
+	add_child(inst)
+	
+	next_block = rand_index()
+	$UI/NextBackground/Thumb.texture = thumbs[next_block]
+
+
+func rand_index():
 	var rnd = randi() % 7
 	while rnd in rands:
 		rnd = randi() % 7
@@ -54,16 +70,12 @@ func generate_block():
 	if rnd != 2:
 		rands.remove(0)
 		rands.append(rnd)
-	#print(rands)
 	
-	var inst = blocks[rnd].instance()
-	inst.set_main(self)
-	connect('tick', inst, '_on_Tick')
-	add_child(inst)
+	return int(rnd)
 
 
-func weighted_random():
-	var rnd = randf()
+#func weighted_random():
+#	var rnd = randf()
 
 
 func lose():
@@ -117,7 +129,7 @@ func clear_lines():
 		return
 	
 	flash(to_clear)
-	yield(get_tree().create_timer(0.5), "timeout")
+	yield(get_tree().create_timer(0.25), "timeout")
 	
 	var cant_use = to_clear
 	for row in range(to_clear.max(), -1, -1):
@@ -179,3 +191,12 @@ func get_grid(pos):
 func _on_Tick_timeout():
 	emit_signal("tick")
 #	update_occupied()
+
+
+func _on_Time_timeout():
+	game_time += 1
+	var hours = int(game_time / 3600)
+	var minutes = int(game_time / 60) % 60
+	var seconds = game_time % 60
+
+	$UI/GameTime.text = "%02d:%02d:%02d" % [hours, minutes, seconds]
